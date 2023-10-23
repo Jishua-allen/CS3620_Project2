@@ -1,0 +1,16 @@
+{% extends "Main/base.html" %}
+
+{%block body %}
+  <h1 class="mt-3 w-75 mx-auto">Choose a Story</h1>
+  <div class="w-75 mx-auto mt-3 d-flex flex-row flex-wrap">
+    {% for story in story_list %}
+      <div class="card m-2 flex-shrink-1" style="width: 400px">
+        <div class="card-body">
+          <h5 class="card-title">{{story.title}}</h5>
+          <p class="card-text">{{story.description}}</p>
+          <a href="{% url 'Main:storyForm' story.id %}" class="btn btn-primary">Play</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

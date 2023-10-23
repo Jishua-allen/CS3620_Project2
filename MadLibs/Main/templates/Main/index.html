@@ -1,0 +1,10 @@
+{% extends "Main/base.html" %}
+
+{% block body %}
+<div class="w-75 mx-auto my-4">
+  <h1>Welcome to Mad Libs!</h1>
+  <p>Mad Libs is a phrasal template word game where one player prompts others for a list of words to substitute for blanks in a story before reading the – often comical or nonsensical – story aloud. The game is frequently played as a party game or as a pastime.</p>
+  <p>Ready to play? Choose a story from our collection and get started!</p>
+  <a href="{% url 'Main:stories' %}" class="btn btn-primary">Choose a Story</a>
+</div>
+{% endblock %}
